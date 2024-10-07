@@ -1,14 +1,17 @@
-"use client"; // Make sure this is also a Client Component
+// pages/editable-box-demo.tsx
 
-import InfoBox from "./Infobox";
+import React from 'react';
+import MissionBox from '../Components/MissionBox'
 
-const Home = () => {
+const EditableBoxDemo: React.FC = () => {
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-gray-50">
-      <h1 className="text-2xl font-bold mb-4 text-black">Simple Info Box Component</h1>
-      <InfoBox />
+    <div className="min-h-screen flex items-center justify-center bg-gray-100 p-4">
+      <MissionBox
+        initialTitle="User Information"
+        initialDescription="Enter your description here..."
+      />
     </div>
   );
 };
 
-export default Home;
+export default EditableBoxDemo;
